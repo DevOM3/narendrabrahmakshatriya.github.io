@@ -48,7 +48,9 @@ const loadBlogPosts = async () => {
         <div class="image_and_content">
           <div class="image_container">
             <img src=${
-              blogPost.image ? blogPost.image : "assets/imgs/logo.jpeg"
+              blogPost.image
+                ? blogPost.image
+                : "https://devom3.github.io/narendrabrahmakshatriya.github.io/assets/imgs/logo.jpeg"
             } alt="" />
           </div>
           <p class="blog_content">
