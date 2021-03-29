@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  padding-top: 21px;
+  display: grid;
+  place-items: center;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.post-form {
+  width: 95%;
+  padding: 21px;
+  padding-left: 11px;
+  padding-right: 11px;
+  max-width: 550px;
+  margin: auto;
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 7px;
+}
+
+button {
+  width: 100%;
+  margin-top: 11px;
+}

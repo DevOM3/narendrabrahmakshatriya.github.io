@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/assets/add-new-blog-post.css" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classical Admin | New Blog Post</title>
+  </head>
+  <body>
+    <form class="post-form">
+      <h4>Add New Blog Post</h4>
+      <div class="form-group">
+        <!-- <label for="blog-title">Blog Title</label> -->
+        <input
+          type="text"
+          class="form-control"
+          id="blog-title"
+          aria-describedby="blog-title"
+          placeholder="Blog Title"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="custom-file">
+          <input
+            type="file"
+            class="custom-file-input"
+            id="blog-image"
+            accept="image/*"
+          />
+          <label class="custom-file-label" for="blog-image"
+            >Blog Image (Optional)</label
+          >
+        </div>
+      </div>
+      <div class="input-group">
+        <!-- <div class="input-group-prepend">
+          <span class="input-group-text">With textarea</span>
+        </div> -->
+        <textarea
+          id="blog-content"
+          class="form-control"
+          placeholder="Blog Content"
+          aria-label="With textarea"
+        ></textarea>
+      </div>
+      <button onclick="post()" type="button" class="btn btn-outline-primary">
+        Post
+      </button>
+    </form>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDg2yNT__J5HhugUUrAH8vnhZCa4FFilI0",
+        authDomain: "narendrabrahmakshatriya-ae473.firebaseapp.com",
+        projectId: "narendrabrahmakshatriya-ae473",
+        storageBucket: "narendrabrahmakshatriya-ae473.appspot.com",
+        messagingSenderId: "321470282327",
+        appId: "1:321470282327:web:54c3803538d58425414112",
+        measurementId: "G-TS6VRXH3HQ",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      var storage = firebase.storage();
+      var db = firebase.firestore();
+    </script>
+  </body>
+  <!-- Local JS  -->
+  <script src="/assets/add-new-blog-post.js"></script>
+</html>
